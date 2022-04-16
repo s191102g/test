@@ -1,0 +1,382 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+}
+.ctn{
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../intro/background.jpeg');
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    position: relative;
+    width: 500px;
+    height: 350px;
+    box-shadow:  5px 10px 18px 10px #e9dede;
+    transform: rotate3d(0);
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+  
+}
+
+
+.class1{
+    position: absolute;
+    transform: translateZ(0px);
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.75;
+}
+.class2{ 
+    position: absolute;
+    transform: translateZ(50px);
+    
+   
+}
+.class3{ 
+    position: absolute;
+    transform: translateZ(100px);
+}
+.class4{ 
+    position: absolute;
+    bottom: 20px;
+    transform: translateZ(150px);
+}
+
+
+.circle1{
+    animation: animate2 3s linear;
+    animation-iteration-count: 100;
+   opacity: 0;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 0px;
+    right: 0px;
+    background-color: olive;
+    box-shadow: 8px 15px 28px rgb(175, 226, 127);
+}
+.circle2{
+    animation: animate2 3s linear;
+    animation-iteration-count: 100;
+   opacity: 0;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 0px;
+    right: 350px;
+    background-color: olive;
+}
+.circle3{
+    animation: animate 3s linear;
+    animation-iteration-count: 100;
+   opacity: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    right: 600px;
+    background-color: olive;
+}
+.circle4{
+   opacity: 0;
+    animation: animate 3s linear;
+    animation-iteration-count: 100;
+    width: 150px; 
+      
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: olive;
+}
+
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+       left: 200px;
+        transform: translateY(-100px);
+       
+    }25%{
+        opacity: 0.5;
+       left: 100px;
+        transform: translateY(-150px);
+    }50%{
+        opacity: 0.8;
+       left: 250px;
+        transform: translateY(-350px);
+    }75%{
+        opacity: 0.5;
+        left: 200px;
+        transform: translateY(-500px);
+    }100%{
+        opacity: 0.1;
+       
+        transform: translateY(-600px);
+    }
+    
+}
+
+@keyframes animate2 {
+    0%{
+        opacity: 0;
+       right: 200px;
+        transform: translateY(-100px);
+       
+    }25%{
+        opacity: 0.5;
+        right: 100px;
+        transform: translateY(-150px);
+    }50%{
+        opacity: 0.8;
+        right: 150px;
+        transform: translateY(-350px);
+    }75%{
+        opacity: 0.5;
+        right: 200px;
+        transform: translateY(-500px);
+    }100%{
+        opacity: 0.1;
+       
+        transform: translateY(-600px);
+    }
+    
+}
+
+
+/* .arr{
+    position: absolute;
+    width: 500px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.arr::after{
+    content: '';
+    z-index: 2;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+   
+}
+
+.arrow-1::after{
+    bottom: 50%;
+    right: 50%;
+    transform-origin: bottom right;
+    transform: skew(20deg,20deg);
+}
+
+.arrow-2::after{
+    bottom: 168%;
+    right: 50%;
+
+    transform-origin: bottom;
+    transform: skew(-20deg,70deg);
+}
+.arrow-3::after{
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom left;
+    transform: skew(-20deg,-20deg);
+}
+.arrow-4::after{
+    bottom: 50%;
+    left: 132%;
+
+    transform-origin:  left;
+    transform: skew(-70deg,20deg);
+}
+.arrow-5::after{
+    top: 50%;
+    left: 50%;
+
+    transform-origin: top left;
+    transform: skew(20deg,20deg);
+}
+
+.arrow-6::after{
+    top: 168%;
+    left: 50%;
+
+    transform-origin: top ;
+    transform: skew(-20deg,70deg);
+}
+
+.arrow-7::after{
+    top: 50%;
+    right: 50%;
+
+    transform-origin: top right ;
+    transform: skew(-20deg,-20deg);
+}
+.arrow-8::after{
+    bottom: 50%;
+    right: 132%;
+
+    transform-origin:  right ;
+    transform: skew(70deg,-20deg);
+}
+
+
+
+
+  .arrow-1:hover ~ .logo{
+        transform: perspective(1200px) rotateX(-15deg)  rotateY(15deg) ;
+  }
+  
+  .arrow-2:hover ~ .logo{
+    transform: perspective(1200px) rotateX(-15deg)  rotateY(0deg) ;
+}
+
+.arrow-3:hover ~ .logo{
+    transform: perspective(1200px) rotateX(-15deg)  rotateY(-15deg) ;
+}
+
+.arrow-4:hover ~ .logo{
+    transform: perspective(1200px) rotateX(0deg)  rotateY(-15deg) ;
+}
+
+
+.arrow-5:hover ~ .logo{
+    transform: perspective(1200px) rotateX(15deg)  rotateY(-15deg) ;
+}
+
+.arrow-6:hover ~ .logo{
+transform: perspective(1200px) rotateX(15deg)  rotateY(0deg) ;
+}
+
+.arrow-7:hover ~ .logo{
+transform: perspective(1200px) rotateX(15deg)  rotateY(15deg) ;
+}
+
+.arrow-8:hover ~ .logo{
+transform: perspective(1200px) rotateX(0deg)  rotateY(15deg) ;
+} */
+
+
+
+.arr{
+    position: absolute;
+    width: 500px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.arr::after{
+    width: 300px;
+    height: 300px;
+    content: " ";
+    z-index: 2;
+    position: absolute;
+}
+
+.arrow-1::after{
+    bottom: 50%;
+    right: 50%;
+
+    transform-origin: bottom right;
+    transform: skew(20deg,20deg);
+}
+
+.arrow-2::after{
+    bottom: 168%;
+    right: 50%;
+
+    transform-origin: bottom ;
+    transform: skew(-20deg,70deg);
+}
+
+.arrow-3::after{
+    bottom: 50%;
+    left: 50%;
+
+    transform-origin: bottom left;
+    transform: skew(-20deg,-20deg);
+}
+
+.arrow-4::after{
+    bottom: 50%;
+    left: 132%;
+
+    transform-origin: left;
+    transform: skew(-70deg,20deg);
+}
+
+.arrow-5::after{
+    top: 50%;
+    left: 50%;
+
+    transform-origin: top left;
+    transform: skew(20deg,20deg);
+}
+
+.arrow-6::after{
+    top: 168%;
+    left: 50%;
+
+    transform-origin: top ;
+    transform: skew(-20deg,70deg);
+}
+
+.arrow-7::after{
+    top: 50%;
+    right: 50%;
+
+    transform-origin: top right;
+    transform: skew(-20deg,-20deg);
+}
+
+.arrow-8::after{
+    bottom: 50%;
+    right: 132%;
+
+    transform-origin:  right;
+    transform: skew(70deg,-20deg);
+}
+
+.arrow-1:hover ~ .logo{
+    transform: perspective(1200px)  rotateX(-15deg) rotateY(15deg) ;
+}
+
+.arrow-2:hover ~ .logo{
+    transform: perspective(1200px)  rotateX(-15deg) rotateY(0deg) ;
+}
+.arrow-3:hover ~ .logo{
+    transform: perspective(1200px)  rotateX(-15deg) rotateY(-15deg) ;
+}
+.arrow-4:hover ~ .logo{
+    transform: perspective(1200px)  rotateX(0deg) rotateY(-15deg) ;
+}
+
+
+
+.arrow-5:hover ~ .logo{
+    transform: perspective(1200px)  rotateX(15deg) rotateY(-15deg) ;
+}
+
+.arrow-6:hover ~ .logo{
+    transform: perspective(1200px)  rotateX(15deg) rotateY(0deg) ;
+}
+.arrow-7:hover ~ .logo{
+    transform: perspective(1200px)  rotateX(15deg) rotateY(15deg) ;
+}
+.arrow-8:hover ~ .logo{
+    transform: perspective(1200px)  rotateX(0deg) rotateY(15deg) ;
+}

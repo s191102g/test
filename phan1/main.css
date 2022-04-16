@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url("../intro/background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+}
+
+.ctn{
+    width: 100%;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width: 500px;
+    height: 350px;
+    position: relative;
+    transform: rotate3d(0);
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.logo .class1{
+   
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    opacity: 0.75;
+    box-shadow: 5px 10px 20px 10px rgb(233, 227, 227);
+}
+
+.logo .class2{
+  
+    position: absolute;
+    transform: translateZ(50px);
+}
+.logo .class3{
+    position: absolute;
+    transform: translateZ(100px);
+}
+.logo .class4{
+    position: absolute;
+    top: 60px;
+    transform: translateZ(150px);
+}
+
+
+.arr{
+    position: absolute;
+    width: 500px;
+    height: 350px;
+   
+    overflow: hidden;
+    border-radius: 20px;
+}
+.arr::after{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    content: "";
+    z-index: 2;
+}
+
+.arrow-1::after{
+    bottom: 50%;
+    right: 50%;
+   
+    transform-origin: bottom right;
+    transform: skew(20deg,20deg);
+}
+
+.arrow-2::after{
+    bottom: 168%;
+    right: 50%;
+   
+    transform-origin: bottom ;
+    transform: skew(-20deg,70deg);
+}
+
+.arrow-3::after{
+    bottom: 50%;
+    left: 50%;
+
+    transform-origin: bottom left ;
+    transform: skew(-20deg,-20deg);
+}
+
+.arrow-4::after{
+    bottom: 50%;
+    left: 132%;
+
+    transform-origin:  left ;
+    transform: skew(-70deg,20deg);
+}
+
+.arrow-5::after{
+    top: 50%;
+    left: 50%;
+
+    transform-origin: top left ;
+    transform: skew(20deg,20deg);
+}
+
+.arrow-6::after{
+    top: 168%;
+    left: 50%;
+
+    transform-origin: top ;
+    transform: skew(-20deg,70deg);
+}
+.arrow-7::after{
+    top: 50%;
+    right: 50%;
+
+    transform-origin: top right ;
+    transform: skew(-20deg,-20deg);
+}
+
+.arrow-8::after{
+    bottom: 50%;
+    right: 132%;
+
+    transform-origin: right ;
+    transform: skew(70deg,-20deg);
+}
+
+
+.arrow-1:hover ~ .logo{
+    transform:  perspective(1200px)  rotateX(-15deg)  rotateY(15deg);
+}
+
+.arrow-2:hover ~ .logo{
+    transform:  perspective(1200px)  rotateX(-15deg)  rotateY(0deg);
+}
+
+.arrow-3:hover ~ .logo{
+    transform:  perspective(1200px)  rotateX(-15deg)  rotateY(-15deg);
+}
+
+.arrow-4:hover ~ .logo{
+    transform:  perspective(1200px)  rotateX(0deg)  rotateY(-15deg);
+}
+
+
+.arrow-5:hover ~ .logo{
+    transform:  perspective(1200px)  rotateX(15deg)  rotateY(-15deg);
+}
+
+.arrow-6:hover ~ .logo{
+    transform:  perspective(1200px)  rotateX(15deg)  rotateY(0deg);
+}
+
+.arrow-7:hover ~ .logo{
+    transform:  perspective(1200px)  rotateX(15deg)  rotateY(15deg);
+}
+
+.arrow-8:hover ~ .logo{
+    transform:  perspective(1200px)  rotateX(0deg)  rotateY(15deg);
+}

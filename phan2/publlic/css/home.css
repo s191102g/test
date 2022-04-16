@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(225, 229, 233, 0.479);
+}
+.ctn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0px;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: red;
+    padding: 0px 200px;
+}
+header .logo{
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+   
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+   width: 80%;
+   height: 100%;
+  
+}
+nav ul{
+    display: flex;
+    justify-content: end;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0px 20px;
+}
+nav ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 200px 0px;
+    align-items: center;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    background-color: yellowgreen;
+    margin-bottom: 20px;
+}
+.box-img{
+    cursor: pointer;
+    width: 100%;
+    height: 70%;
+    padding: 20px;
+}
+.box-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.box-text{
+    width: 100%;
+    height: 15%;
+    padding:  0px 20px;
+}
+
+.box-like{
+    width: 100%;
+    height: 15%;
+    padding:  0px 20px;
+}
+.like{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    cursor: pointer;
+}
+
+.more{
+    width: 50px;
+    height: 10px;
+    margin-top: 20px;
+    background-color: yellow;
+}
+
+.act{
+    display: none;
+}
+.test{
+    display: none;
+}
+.tt{
+    display: block;
+}
